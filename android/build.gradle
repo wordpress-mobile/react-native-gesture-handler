@@ -37,6 +37,13 @@ android {
     }
     
     repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
         if (project == rootProject) {
             maven {
                 url "https://dl.bintray.com/wordpress-mobile/react-native-mirror/"
