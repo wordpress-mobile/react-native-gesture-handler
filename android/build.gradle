@@ -1,14 +1,12 @@
 buildscript {
-  if (project == rootProject) {
-    repositories {
+  repositories {
       google()
       jcenter()
-    }
+  }
 
-    dependencies {
-        classpath rootProject.ext.has('gradleBuildTools') ? rootProject.ext.get('gradleBuildTools') : 'com.android.tools.build:gradle:3.3.0'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-    }
+  dependencies {
+      classpath rootProject.ext.has('gradleBuildTools') ? rootProject.ext.get('gradleBuildTools') : 'com.android.tools.build:gradle:3.3.0'
+      classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
   }
 }
 
